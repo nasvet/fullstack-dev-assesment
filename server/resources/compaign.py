@@ -16,4 +16,4 @@ class CompaignsList(Resource):
             compaigns.append(compaign_model.json())
 
         connection.close()
-        return {'compaigns': compaigns}, 400
+        return {'compaigns': compaigns}
