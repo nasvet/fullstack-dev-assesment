@@ -1,5 +1,5 @@
 
-class CompaignModel:
+class CampaignModel:
     def __init__(self, id, name, goal, total_budget):
         self.id = id
         self.name = name

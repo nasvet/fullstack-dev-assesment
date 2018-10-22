@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-export const FETCH_COMPAIGNS = 'fetch_compaigns';
+export const FETCH_CAMPAIGNS = 'fetch_campaigns';
 
 const  ROOT_URL = 'http://127.0.0.1:5000';
 
-export function fetchCompaigns() {
-  const request = axios.get(`${ROOT_URL}/compaigns`)
+export function fetchCampaigns() {
+  const request = axios.get(`${ROOT_URL}/campaigns`)
 
   return {
-    type: FETCH_COMPAIGNS,
+    type: FETCH_CAMPAIGNS,
     payload: request
   };
 }

@@ -5,30 +5,30 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 Table compaigns \{\
+\f0\fs24 \cf0 Table campaigns \{\
   id int PK\
   name varchar\
   goal varchar\
   total_budget varchar\
-  status compaign_status\
+  status campaign_status\
 \}\
 \
-Table compaign_status \{\
+Table campaign_status \{\
   status enum\
 \}\
 \
 Table platforms \{\
   id int PK\
-  compaign_id int\
-  type compaign_type\
-  status compaign_status\
+  campaign_id int\
+  type campaign_type\
+  status campaign_status\
   total_budget int\
   remaining_budget int\
   start_date datetime\
   end_date datetime\
 \}\
 \
-Table compaign_type \{\
+Table campaign_type \{\
   type enum\
 \}\
 \
@@ -83,9 +83,9 @@ Table insights \{\
   advanced_kpi_2 int\
 \}\
 \
-Ref: compaigns.status > compaign_status.status\
-Ref: compaigns.id > platforms.compaign_id\
-Ref: compaign_type.type > platforms.type\
+Ref: campaigns.status > campaign_status.status\
+Ref: campaigns.id > platforms.campaign_id\
+Ref: campaign_type.type > platforms.type\
 Ref: platforms.id > target_audiance.platform_id\
 Ref: target_audiance.languages > languages.iso_code\
 Ref: target_audiance.genders > genders.gender\
